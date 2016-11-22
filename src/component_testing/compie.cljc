@@ -11,6 +11,9 @@
   (str/includes? s "fox"))
 
 (defui Compie
+  static om/IQuery
+  (query [this] [:x :y])
+  
   Object
   (initLocalState [this] {:c "foo"})
 
